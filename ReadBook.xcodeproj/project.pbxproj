@@ -132,6 +132,7 @@
 		DDF642AB1E07E8DA00B2EA1B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RB;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "机智的静默( https://github.com/jizhidejingmo )";
 				TargetAttributes = {
