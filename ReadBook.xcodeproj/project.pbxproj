@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95A9D8049738F9F67FC3AB0B /* libPods-ReadBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6882AD769D0A1CDC93DB523E /* libPods-ReadBook.a */; };
 		DDF642B81E07E8DA00B2EA1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF642B71E07E8DA00B2EA1B /* main.m */; };
 		DDF642BB1E07E8DA00B2EA1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF642BA1E07E8DA00B2EA1B /* AppDelegate.m */; };
 		DDF642BE1E07E8DA00B2EA1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF642BD1E07E8DA00B2EA1B /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6882AD769D0A1CDC93DB523E /* libPods-ReadBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReadBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAA9FA642AF66BCA4D35C9B /* Pods-ReadBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReadBook/Pods-ReadBook.debug.xcconfig"; sourceTree = "<group>"; };
+		C17E82C2B2CC83862C6AB19F /* Pods-ReadBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReadBook/Pods-ReadBook.release.xcconfig"; sourceTree = "<group>"; };
 		DDF642B31E07E8DA00B2EA1B /* ReadBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF642B71E07E8DA00B2EA1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DDF642B91E07E8DA00B2EA1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A9D8049738F9F67FC3AB0B /* libPods-ReadBook.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8131058B9B2B6C7346605C7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BAA9FA642AF66BCA4D35C9B /* Pods-ReadBook.debug.xcconfig */,
+				C17E82C2B2CC83862C6AB19F /* Pods-ReadBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C865A88CFA90BB6D1409CBD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6882AD769D0A1CDC93DB523E /* libPods-ReadBook.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DDF642AA1E07E8DA00B2EA1B = {
 			isa = PBXGroup;
 			children = (
 				DDF642B51E07E8DA00B2EA1B /* ReadBook */,
 				DDF642B41E07E8DA00B2EA1B /* Products */,
+				8131058B9B2B6C7346605C7E /* Pods */,
+				C865A88CFA90BB6D1409CBD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDF642CA1E07E8DA00B2EA1B /* Build configuration list for PBXNativeTarget "ReadBook" */;
 			buildPhases = (
+				576C5F22BAB347111345A63F /* [CP] Check Pods Manifest.lock */,
 				DDF642AF1E07E8DA00B2EA1B /* Sources */,
 				DDF642B01E07E8DA00B2EA1B /* Frameworks */,
 				DDF642B11E07E8DA00B2EA1B /* Resources */,
+				77F9D18ACC4B22D431C04505 /* [CP] Embed Pods Frameworks */,
+				755C2DAE648B8D2C5939C095 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		576C5F22BAB347111345A63F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		755C2DAE648B8D2C5939C095 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReadBook/Pods-ReadBook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77F9D18ACC4B22D431C04505 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReadBook/Pods-ReadBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDF642AF1E07E8DA00B2EA1B /* Sources */ = {
@@ -268,9 +343,11 @@
 		};
 		DDF642CB1E07E8DA00B2EA1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BAA9FA642AF66BCA4D35C9B /* Pods-ReadBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReadBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JM.ReadBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -279,9 +356,11 @@
 		};
 		DDF642CC1E07E8DA00B2EA1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C17E82C2B2CC83862C6AB19F /* Pods-ReadBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReadBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JM.ReadBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -307,6 +386,7 @@
 				DDF642CC1E07E8DA00B2EA1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
