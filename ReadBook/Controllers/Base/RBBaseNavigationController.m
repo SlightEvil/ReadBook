@@ -14,25 +14,12 @@
 
 @implementation RBBaseNavigationController
 
-
-//- (void)setBarTintColor:(UIColor *)barTintColor {
-//
-//    _barTintColor = barTintColor;
-//    [self.navigationBar setBarTintColor:_barTintColor];
-//}
-//
-//- (void)setTintColor:(UIColor *)tintColor {
-//
-//    _tintColor = tintColor;
-//    ·
-//    [self.navigationBar setTintColor:_tintColor];
-//    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:_tintColor}];
-//}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view.
+    
+    [self.navigationBar setBarTintColor:RBNavBarTintColor];
+    [self.navigationBar setTintColor:RBNavTintColor];
+    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:RBNavTintColor}];
 }
 
 - (void)didReceiveMemoryWarning {

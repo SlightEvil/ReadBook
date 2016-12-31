@@ -9,15 +9,13 @@
 #ifndef RBHelperDefines_h
 #define RBHelperDefines_h
 
+#pragma mark - common
+#define RBLocalizedString(str) NSLocalizedString(str, nil)
 
-
-#pragma mark - 
+#pragma mark - ScreenSize
 
 #define RBScreenWidth   CGRectGetWidth([UIScreen mainScreen].bounds)
-
 #define RBScreenHeight  CGRectGetHeight([UIScreen mainScreen].bounds)
-
-
 
 #pragma mark - Notification
 
@@ -33,8 +31,7 @@
 #define RBRemoveAllNotification()                     \
 [[NSNotificationCenter defaultCenter] removeObserver:self]
 
-
-#pragma mark - Single
+#pragma mark - Singleton
 
 #define RBSingletonDeclaration \
 + (instancetype)sharedInstance;

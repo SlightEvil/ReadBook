@@ -10,9 +10,4 @@
 
 @interface RBBaseNavigationController : UINavigationController
 
-
-//@property (nonatomic,strong) UIColor *barTintColor;
-//@property (nonatomic,strong) UIColor *tintColor;
-
-
 @end

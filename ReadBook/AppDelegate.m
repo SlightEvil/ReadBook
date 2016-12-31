@@ -9,18 +9,16 @@
 #import "AppDelegate.h"
 #import "RBAppContext.h"
 
-
-@interface AppDelegate ()
+@interface AppDelegate () <UIApplicationDelegate>
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-    
-    [AppCTX setUpWindowRootViewWithNavVC];
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    [AppCTX setUpWindowRootViewController];
     
     return YES;
 }

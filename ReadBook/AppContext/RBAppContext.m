@@ -8,13 +8,14 @@
 
 #import "RBAppContext.h"
 #import "RBBaseNavigationController.h"
-#import "RBBookCaseVC.h"
-
+#import "RBTabBarController.h"
+#import "RBNovelVC.h"
+#import "RBStockVC.h"
 
 @interface RBAppContext ()
 
-@property (nonatomic, readwrite) RBBaseNavigationController *navVC;
-@property (nonatomic, readwrite) UIWindow *window;
+@property (nonatomic) RBTabBarController *tabbarVC;
+@property (nonatomic) UIWindow *window;
 
 @end
 
@@ -23,57 +24,40 @@
 
 RBSingletonImplementation
 
+#pragma mark - Getter
 
-#pragma mark - Setter
-
-- (void)setTintColor:(UIColor *)tintColor {
-
-    _tintColor = tintColor;
-    [_navVC.navigationBar setTintColor:_tintColor];
-}
-
-- (void)setBarTintColor:(UIColor *)barTintColor {
-
-    _barTintColor = barTintColor;
-    [_navVC.navigationBar setBarTintColor:_barTintColor];
-    [_navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:_barTintColor}];
-}
-
-- (void)setStatusStyleWhite:(BOOL)statusStyleWhite {
-
-    _statusStyleWhite = statusStyleWhite;
+- (RBTabBarController *)tabbarVC {
     
-    if (_statusStyleWhite) {
-        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    } else {
-        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-    }
-}
-
-#pragma mark -Getter
-
-- (RBBaseNavigationController *)navVC {
-    if (!_navVC) {
-        UIViewController *rootView = [RBBookCaseVC new];
-        _navVC = [[RBBaseNavigationController alloc]initWithRootViewController:rootView];
+    if (!_tabbarVC) {
         
-        [_navVC.navigationBar setBarTintColor:RBNavBarTintColor];
-        [_navVC.navigationBar setTintColor:RBNavTintColor];
-        [_navVC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:RBNavTintColor}];
+        _tabbarVC = [[RBTabBarController alloc] init];
     }
-    return _navVC;
+    
+    return _tabbarVC;
 }
 
 - (UIWindow *)window {
+    
     return [UIApplication sharedApplication].delegate.window;
 }
 
-- (void)setUpWindowRootViewWithNavVC {
+#pragma mark - Setup
 
-    self.window.rootViewController = self.navVC;
+- (void)setUpWindowRootViewController {
+
+    RBStockVC *stock = [[RBStockVC alloc] init];
+    RBBaseNavigationController *stockNavVC = [[RBBaseNavigationController alloc] initWithRootViewController:stock];
+    stockNavVC.tabBarItem.image = [UIImage imageNamed:@"tabbar_stock_unselected"];
+    
+    RBNovelVC *novel = [[RBNovelVC alloc] init];
+    RBBaseNavigationController *novelNavVC = [[RBBaseNavigationController alloc] initWithRootViewController:novel];
+    novelNavVC.tabBarItem.image = [UIImage imageNamed:@"tabbar_novel_unselected"];
+    
+    self.tabbarVC.viewControllers = @[stockNavVC, novelNavVC];
+    
+    self.window.rootViewController = self.tabbarVC;
     [self.window makeKeyAndVisible];
 }
-
 
 
 @end

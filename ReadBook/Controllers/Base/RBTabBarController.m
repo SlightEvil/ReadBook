@@ -1,29 +1,28 @@
 //
-//  RBChapter.m
+//  RBTabBarController.m
 //  ReadBook
 //
-//  Created by hy on 2016/12/27.
+//  Created by yangyang on 2016/12/31.
 //  Copyright © 2016年 机智的静默( https://github.com/jizhidejingmo ). All rights reserved.
 //
 
-#import "RBChapter.h"
+#import "RBTabBarController.h"
 
-@interface RBChapter ()
+@interface RBTabBarController ()
 
 @end
 
-@implementation RBChapter
+@implementation RBTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.tabBar.tintColor = RBNavBarTintColor;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 @end
