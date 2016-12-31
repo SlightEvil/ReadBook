@@ -9,19 +9,23 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class RBBaseNavigationController;
+
+#define AppCTX [RBAppContext sharedInstance]
 
 @interface RBAppContext : NSObject
 
-@property (nonatomic, readonly) UINavigationController *navVC;
-//@property (nonatomic, readonly) UITabBarController *tabVC;
+RBSingletonDeclaration
+
+@property (nonatomic, readonly) RBBaseNavigationController *navVC;
 @property (nonatomic, readonly) UIWindow *window;
 
-
-
+@property (nonatomic) UIColor *barTintColor;
+@property (nonatomic) UIColor *tintColor;
+@property (nonatomic) BOOL statusStyleWhite;
 
 
 - (void)setUpWindowRootViewWithNavVC;
-
 
 
 @end

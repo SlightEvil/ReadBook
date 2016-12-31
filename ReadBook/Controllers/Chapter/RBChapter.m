@@ -1,29 +1,29 @@
 //
-//  ViewController.m
+//  RBChapter.m
 //  ReadBook
 //
-//  Created by yangyang on 2016/12/19.
+//  Created by hy on 2016/12/27.
 //  Copyright © 2016年 机智的静默( https://github.com/jizhidejingmo ). All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RBChapter.h"
 
-@interface ViewController ()
+@interface RBChapter ()
 
 @end
 
-@implementation ViewController
+@implementation RBChapter
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end
