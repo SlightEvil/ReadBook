@@ -8,9 +8,8 @@
 
 #import "RBSearchBookCell.h"
 #import "RBNovel.h"
+
 #import <UIImageView+WebCache.h>
-
-
 
 
 @implementation RBSearchBookCell
@@ -19,11 +18,9 @@
 
     _novel = novel;
     
-    _name.text = novel.name;
-    _intro.text = novel.intro;
-    [_coverImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BqgHostUrl,novel.cover]] placeholderImage:[UIImage imageNamed:@"novel_book_placeholder"]];
-    
-    NSLog(@"简介 = %@",_intro.text);
+    self.name.text = novel.name;
+    self.intro.text = novel.intro;
+    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BqgHostUrl,novel.cover]] placeholderImage:[UIImage imageNamed:@"novel_book_placeholder"]];
 }
 
 
@@ -36,12 +33,6 @@
     return self;
 }
 
-
-/*
- 
-
- */
-
 - (void)awakeFromNib {
     [super awakeFromNib];
 
@@ -50,7 +41,6 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
 }
 
 @end

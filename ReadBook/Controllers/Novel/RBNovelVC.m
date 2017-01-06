@@ -7,16 +7,17 @@
 //
 
 #import "RBNovelVC.h"
-#import <AFHTTPSessionManager.h>
 #import "RBBook.h"
 #import "RBSearchNovel.h"
 
+#import <AFHTTPSessionManager.h>
 
-@interface RBNovelVC ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
+
+@interface RBNovelVC () <UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 
 @property (nonatomic, copy) NSArray *bookArray;
-@property (nonatomic, strong) UITableView *bookTableView;
-@property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic) UITableView *bookTableView;
+@property (nonatomic) UISearchBar *searchBar;
 
 @end
 
@@ -42,17 +43,15 @@
     [self.view addSubview:self.bookTableView];
 }
 
-- (void)setUpNavBarSearchItem {
+#pragma mark - Set UI
 
-    UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    searchBtn.frame = CGRectMake(0, 0, 30, 30);
-    [searchBtn setImage:[UIImage imageNamed:@"novel_search_btn"] forState:UIControlStateNormal];
-    [searchBtn addTarget:self action:@selector(enterSearchVC) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc]initWithCustomView:searchBtn];
-    self.navigationItem.rightBarButtonItem = searchItem;
+- (void)setUpNavBarSearchItem {
+    
+    UIBarButtonItem *navBarRightSearchItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"novel_search_btn"] style:UIBarButtonItemStylePlain target:self action:@selector(enterSearchVC)];
+    self.navigationItem.rightBarButtonItem = navBarRightSearchItem;
 }
 
-#pragma mark -
+#pragma mark - Methods
 
 - (void)enterSearchVC {
 
@@ -60,29 +59,18 @@
     [self.navigationController pushViewController:searchNovel animated:YES];
 }
 
+#pragma mark - Delegate
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.bookArray.count ? self.bookArray.count : 0;
+    return self.bookArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    RBSearchBookCell *cell = [tableView dequeueReusableCellWithIdentifier:RBCellIdentifierWithSearchBook];
-//    if (!cell) {
-//        cell = [[RBSearchBookCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RBCellIdentifierWithSearchBook];
-//    }
-//    
-//    RBBook *book = [self.bookArray objectAtIndex:indexPath.row];
-//    RBNovel *novel = [RBNovel rb_objcWithDic:book.novel];
-//    cell.novel = novel;
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:RBCellIdentifierWithNovelBookSheif];
     cell.textLabel.text = @"test";
     
     return cell;
@@ -93,30 +81,25 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return 90;
+    return RBNovelSheifCellHeight;
 }
 
 #pragma mark - Getter
+
 - (UITableView *)bookTableView {
 
     if (!_bookTableView) {
         _bookTableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
         _bookTableView.delegate = self;
         _bookTableView.dataSource = self;
+        [_bookTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:RBCellIdentifierWithNovelBookSheif];
     }
     return _bookTableView;
 }
-
-
-#pragma mark - Setter
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

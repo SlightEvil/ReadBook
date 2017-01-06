@@ -29,8 +29,13 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+#pragma mark - Set UI
 
-
+- (void)setUpNavBarBackItem {
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_back"] style:UIBarButtonItemStylePlain target:self action:@selector(backBeforeVC)];
+    self.navigationItem.leftBarButtonItem = backItem;
+}
 
 #pragma mark - Methods
 
@@ -38,25 +43,6 @@
 
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-
-#pragma mark - UI
-
-- (void)setUpNavBarBackItem {
-    
-    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame = CGRectMake(0, 0, RBNavBarBackItemSize, RBNavBarBackItemSize);
-    [backBtn setImage:[UIImage imageNamed:@"navbar_back"] forState:UIControlStateNormal];
-    [backBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 12)];
-    [backBtn addTarget:self action:@selector(backBeforeVC) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
-    self.navigationItem.leftBarButtonItem = backItem;
-}
-
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

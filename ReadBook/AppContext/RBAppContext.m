@@ -41,7 +41,7 @@ RBSingletonImplementation
     return [UIApplication sharedApplication].delegate.window;
 }
 
-#pragma mark - Setup
+#pragma mark - SetupRootVC
 
 - (void)setUpWindowRootViewController {
 

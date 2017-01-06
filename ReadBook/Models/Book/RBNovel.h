@@ -6,8 +6,6 @@
 //  Copyright © 2017年 机智的静默( https://github.com/jizhidejingmo ). All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface RBNovel : NSObject
 
 @property (nonatomic, copy) NSString *name;

@@ -49,6 +49,8 @@
 #pragma mark - CellIdentifier
 
 #define RBCellIdentifierWithSearchBook      @"RBCellIdentifierWithSearchBook"
+#define RBCellIdentifierWithNovelBookSheif      @"RBCellIdentifierWithNovelBookSheif"
+
 
 
 //#pragma mark - NSDictionary Key

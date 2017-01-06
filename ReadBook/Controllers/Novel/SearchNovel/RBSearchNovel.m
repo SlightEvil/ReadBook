@@ -6,23 +6,24 @@
 //  Copyright © 2017年 机智的静默( https://github.com/jizhidejingmo ). All rights reserved.
 //
 
-#import "RBSearchNovel.h"
 #import "RBBook.h"
 #import "RBNovel.h"
+#import "RBSearchNovel.h"
 #import "RBSearchBookCell.h"
 #import "RBNovelParticularsVC.h"
+
 #import <AFNetworking.h>
 
 
+@interface RBSearchNovel () <UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 
-@interface RBSearchNovel ()<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
-
-@property (nonatomic, strong) UISearchBar *searchBar;
-@property (nonatomic, strong) UITableView *searchResultTableView;
+@property (nonatomic) UISearchBar *searchBar;
+@property (nonatomic) UITableView *searchResultTableView;
 
 @property (nonatomic, copy) NSArray  *novelBookArray;
 
 @end
+
 
 @implementation RBSearchNovel
 
@@ -44,6 +45,15 @@
     
     [self.view addSubview:self.searchBar];
     [self.view addSubview:self.searchResultTableView];
+}
+
+
+#pragma mark - SetUp UI
+
+- (void)setUpNavBarBackItem {
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_back"] style:UIBarButtonItemStylePlain target:self action:@selector(backNovelSheifVC)];
+    self.navigationItem.leftBarButtonItem = backItem;
 }
 
 
@@ -91,26 +101,7 @@
     
 }
 
-#pragma mark - Setter
-
-- (void)setNovelBookArray:(NSArray *)novelBookArray {
-
-    _novelBookArray = novelBookArray;
-    [_searchResultTableView reloadData];
-}
-
-#pragma mark - SetUp UI
-
-- (void)setUpNavBarBackItem {
-    
-    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame = CGRectMake(0, 0, RBNavBarBackItemSize, RBNavBarBackItemSize);
-    [backBtn setImage:[UIImage imageNamed:@"navbar_back"] forState:UIControlStateNormal];
-    [backBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 12)];
-    [backBtn addTarget:self action:@selector(backNovelSheifVC) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
-    self.navigationItem.leftBarButtonItem = backItem;
-}
+#pragma mark - Getter
 
 - (UISearchBar *)searchBar {
     
@@ -132,6 +123,14 @@
         [_searchResultTableView registerNib:[UINib nibWithNibName:NSStringFromClass([RBSearchBookCell class]) bundle:nil] forCellReuseIdentifier:RBCellIdentifierWithSearchBook];
     }
     return _searchResultTableView;
+}
+#pragma mark - Setter
+
+- (void)setNovelBookArray:(NSArray *)novelBookArray {
+    
+    _novelBookArray = novelBookArray;
+    [_searchResultTableView reloadData];
+    
 }
 
 #pragma mark - Delegate
@@ -168,19 +167,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.novelBookArray ? self.novelBookArray.count : 0;
+    return self.novelBookArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     RBSearchBookCell *cell = [tableView dequeueReusableCellWithIdentifier:RBCellIdentifierWithSearchBook forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[RBSearchBookCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:RBCellIdentifierWithSearchBook];
-    }
     
     RBBook *book = [self.novelBookArray objectAtIndex:indexPath.row];
     RBNovel *novel = [RBNovel rb_objcWithDic:book.novel];
-    
     cell.novel = novel;
     
     return cell;
@@ -204,7 +199,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 
 @end
