@@ -7,8 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040CCC871E1F87A100299A73 /* RBNovelParticularsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040CCC851E1F87A100299A73 /* RBNovelParticularsCell.m */; };
+		040CCC881E1F87A100299A73 /* RBNovelParticularsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040CCC861E1F87A100299A73 /* RBNovelParticularsCell.xib */; };
 		0411D1F61E165E9A0054951B /* RBAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D1F51E165E9A0054951B /* RBAppContext.m */; };
+		0428982C1E1E3F9A0015258D /* RBSearchNovel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0428982A1E1E3F9A0015258D /* RBSearchNovel.m */; };
+		0428982D1E1E3F9A0015258D /* RBSearchNovel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0428982B1E1E3F9A0015258D /* RBSearchNovel.xib */; };
+		042898381E1E567E0015258D /* RBNovelParticularsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042898361E1E567E0015258D /* RBNovelParticularsVC.m */; };
+		042898391E1E567E0015258D /* RBNovelParticularsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042898371E1E567E0015258D /* RBNovelParticularsVC.xib */; };
+		0455D0001E1B853A000AC9F0 /* RBBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455CFFF1E1B853A000AC9F0 /* RBBook.m */; };
+		0455D0041E1B8CE0000AC9F0 /* NSObject+RBRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455D0031E1B8CE0000AC9F0 /* NSObject+RBRuntime.m */; };
+		0455D0101E1BA6BE000AC9F0 /* RBSearchBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455D00E1E1BA6BE000AC9F0 /* RBSearchBookCell.m */; };
+		0455D0111E1BA6BE000AC9F0 /* RBSearchBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0455D00F1E1BA6BE000AC9F0 /* RBSearchBookCell.xib */; };
 		04DACB671E0D165A00D47DC6 /* RBBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DACB661E0D165A00D47DC6 /* RBBaseNavigationController.m */; };
+		04E83E421E1CF44B006ED271 /* RBNovel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E83E411E1CF44B006ED271 /* RBNovel.m */; };
 		95A9D8049738F9F67FC3AB0B /* libPods-ReadBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6882AD769D0A1CDC93DB523E /* libPods-ReadBook.a */; };
 		DDD8BF861E179382000E10F7 /* RBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD8BF851E179382000E10F7 /* RBTabBarController.m */; };
 		DDD8BF991E179649000E10F7 /* RBStockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD8BF971E179649000E10F7 /* RBStockVC.m */; };
@@ -23,11 +34,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040CCC841E1F87A100299A73 /* RBNovelParticularsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBNovelParticularsCell.h; sourceTree = "<group>"; };
+		040CCC851E1F87A100299A73 /* RBNovelParticularsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBNovelParticularsCell.m; sourceTree = "<group>"; };
+		040CCC861E1F87A100299A73 /* RBNovelParticularsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBNovelParticularsCell.xib; sourceTree = "<group>"; };
 		0411D1F41E165E9A0054951B /* RBAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RBAppContext.h; path = AppContext/RBAppContext.h; sourceTree = "<group>"; };
 		0411D1F51E165E9A0054951B /* RBAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RBAppContext.m; path = AppContext/RBAppContext.m; sourceTree = "<group>"; };
+		042898291E1E3F9A0015258D /* RBSearchNovel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSearchNovel.h; sourceTree = "<group>"; };
+		0428982A1E1E3F9A0015258D /* RBSearchNovel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSearchNovel.m; sourceTree = "<group>"; };
+		0428982B1E1E3F9A0015258D /* RBSearchNovel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBSearchNovel.xib; sourceTree = "<group>"; };
+		042898351E1E567E0015258D /* RBNovelParticularsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBNovelParticularsVC.h; sourceTree = "<group>"; };
+		042898361E1E567E0015258D /* RBNovelParticularsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBNovelParticularsVC.m; sourceTree = "<group>"; };
+		042898371E1E567E0015258D /* RBNovelParticularsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBNovelParticularsVC.xib; sourceTree = "<group>"; };
+		0455CFFE1E1B853A000AC9F0 /* RBBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBook.h; sourceTree = "<group>"; };
+		0455CFFF1E1B853A000AC9F0 /* RBBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBook.m; sourceTree = "<group>"; };
+		0455D0021E1B8CE0000AC9F0 /* NSObject+RBRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RBRuntime.h"; sourceTree = "<group>"; };
+		0455D0031E1B8CE0000AC9F0 /* NSObject+RBRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RBRuntime.m"; sourceTree = "<group>"; };
+		0455D00D1E1BA6BE000AC9F0 /* RBSearchBookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSearchBookCell.h; sourceTree = "<group>"; };
+		0455D00E1E1BA6BE000AC9F0 /* RBSearchBookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSearchBookCell.m; sourceTree = "<group>"; };
+		0455D00F1E1BA6BE000AC9F0 /* RBSearchBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBSearchBookCell.xib; sourceTree = "<group>"; };
 		04DACB651E0D165A00D47DC6 /* RBBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBaseNavigationController.h; sourceTree = "<group>"; };
 		04DACB661E0D165A00D47DC6 /* RBBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBaseNavigationController.m; sourceTree = "<group>"; };
 		04DEC1241E124ED20052522A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04E83E401E1CF44B006ED271 /* RBNovel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBNovel.h; sourceTree = "<group>"; };
+		04E83E411E1CF44B006ED271 /* RBNovel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBNovel.m; sourceTree = "<group>"; };
 		6882AD769D0A1CDC93DB523E /* libPods-ReadBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReadBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAA9FA642AF66BCA4D35C9B /* Pods-ReadBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReadBook/Pods-ReadBook.debug.xcconfig"; sourceTree = "<group>"; };
 		C17E82C2B2CC83862C6AB19F /* Pods-ReadBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReadBook/Pods-ReadBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,10 +93,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042898251E1E3EE10015258D /* SearchNovel */ = {
+			isa = PBXGroup;
+			children = (
+				0428982F1E1E55CD0015258D /* NovelParticulars */,
+				042898291E1E3F9A0015258D /* RBSearchNovel.h */,
+				0428982A1E1E3F9A0015258D /* RBSearchNovel.m */,
+				0428982B1E1E3F9A0015258D /* RBSearchNovel.xib */,
+			);
+			path = SearchNovel;
+			sourceTree = "<group>";
+		};
+		0428982F1E1E55CD0015258D /* NovelParticulars */ = {
+			isa = PBXGroup;
+			children = (
+				042898351E1E567E0015258D /* RBNovelParticularsVC.h */,
+				042898361E1E567E0015258D /* RBNovelParticularsVC.m */,
+				042898371E1E567E0015258D /* RBNovelParticularsVC.xib */,
+			);
+			path = NovelParticulars;
+			sourceTree = "<group>";
+		};
+		0455CFFC1E1B53DA000AC9F0 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Methods;
+			sourceTree = "<group>";
+		};
+		0455CFFD1E1B848B000AC9F0 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				0455CFFE1E1B853A000AC9F0 /* RBBook.h */,
+				0455CFFF1E1B853A000AC9F0 /* RBBook.m */,
+				04E83E401E1CF44B006ED271 /* RBNovel.h */,
+				04E83E411E1CF44B006ED271 /* RBNovel.m */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		0455D0011E1B8C14000AC9F0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0455D0021E1B8CE0000AC9F0 /* NSObject+RBRuntime.h */,
+				0455D0031E1B8CE0000AC9F0 /* NSObject+RBRuntime.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		0455D0091E1BA614000AC9F0 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				0455D00D1E1BA6BE000AC9F0 /* RBSearchBookCell.h */,
+				0455D00E1E1BA6BE000AC9F0 /* RBSearchBookCell.m */,
+				0455D00F1E1BA6BE000AC9F0 /* RBSearchBookCell.xib */,
+				040CCC841E1F87A100299A73 /* RBNovelParticularsCell.h */,
+				040CCC851E1F87A100299A73 /* RBNovelParticularsCell.m */,
+				040CCC861E1F87A100299A73 /* RBNovelParticularsCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		04DAC9691E0D063500D47DC6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				DDD8BF871E179414000E10F7 /* Defines */,
+				0455CFFC1E1B53DA000AC9F0 /* Methods */,
+				0455D0011E1B8C14000AC9F0 /* Categories */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -85,6 +177,7 @@
 		04DAC96F1E0D0D2C00D47DC6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0455CFFD1E1B848B000AC9F0 /* Book */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +185,7 @@
 		04DAC9701E0D0D3600D47DC6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0455D0091E1BA614000AC9F0 /* TableView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,6 +231,7 @@
 		DDD8BF8A1E17951A000E10F7 /* Novel */ = {
 			isa = PBXGroup;
 			children = (
+				042898251E1E3EE10015258D /* SearchNovel */,
 				DDD8BF9B1E17966A000E10F7 /* RBNovelVC.h */,
 				DDD8BF9C1E17966A000E10F7 /* RBNovelVC.m */,
 				DDD8BF9D1E17966A000E10F7 /* RBNovelVC.xib */,
@@ -244,6 +339,7 @@
 				TargetAttributes = {
 					DDF642B21E07E8DA00B2EA1B = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 6UARGHV5EB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -271,9 +367,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0455D0111E1BA6BE000AC9F0 /* RBSearchBookCell.xib in Resources */,
 				DDD8BFA41E17990F000E10F7 /* Localizable.strings in Resources */,
 				DDF642C61E07E8DA00B2EA1B /* LaunchScreen.storyboard in Resources */,
 				DDD8BF9A1E179649000E10F7 /* RBStockVC.xib in Resources */,
+				040CCC881E1F87A100299A73 /* RBNovelParticularsCell.xib in Resources */,
+				042898391E1E567E0015258D /* RBNovelParticularsVC.xib in Resources */,
+				0428982D1E1E3F9A0015258D /* RBSearchNovel.xib in Resources */,
 				DDF642C31E07E8DA00B2EA1B /* Assets.xcassets in Resources */,
 				DDD8BF9F1E17966A000E10F7 /* RBNovelVC.xib in Resources */,
 			);
@@ -335,11 +435,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDD8BF9E1E17966A000E10F7 /* RBNovelVC.m in Sources */,
+				040CCC871E1F87A100299A73 /* RBNovelParticularsCell.m in Sources */,
 				DDF642BB1E07E8DA00B2EA1B /* AppDelegate.m in Sources */,
+				0455D0001E1B853A000AC9F0 /* RBBook.m in Sources */,
 				DDD8BF991E179649000E10F7 /* RBStockVC.m in Sources */,
+				04E83E421E1CF44B006ED271 /* RBNovel.m in Sources */,
+				0455D0101E1BA6BE000AC9F0 /* RBSearchBookCell.m in Sources */,
+				0455D0041E1B8CE0000AC9F0 /* NSObject+RBRuntime.m in Sources */,
 				DDF642B81E07E8DA00B2EA1B /* main.m in Sources */,
+				0428982C1E1E3F9A0015258D /* RBSearchNovel.m in Sources */,
 				0411D1F61E165E9A0054951B /* RBAppContext.m in Sources */,
 				04DACB671E0D165A00D47DC6 /* RBBaseNavigationController.m in Sources */,
+				042898381E1E567E0015258D /* RBNovelParticularsVC.m in Sources */,
 				DDD8BF861E179382000E10F7 /* RBTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,7 +561,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6UARGHV5EB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ReadBook/PrefixHeader.pch";
 				INFOPLIST_FILE = ReadBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -470,7 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6UARGHV5EB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ReadBook/PrefixHeader.pch";
 				INFOPLIST_FILE = ReadBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -19,6 +19,19 @@
 #define RBTabBarHeight          49.0f
 #define RBAnimationuration      0.25f
 
+#pragma mark - Font 
+
+#define RBNovelParticularsButtonFont  12
+
+
+#pragma mark - Frame
+
+#define RBSearchBarHeight           40.0f
+#define RBNovelSheifCellHeight      80.0f
+#define RBNavBarBackItemSize        35.0f
+
+
+
 #pragma mark - Colors 
 
 #define RGBA(r, g, b, a)    [UIColor colorWithRed:(r/255.0f) green:(g/255.0f) blue:(b/255.0f) alpha:a]
@@ -31,5 +44,21 @@
 #define RBOldBookColor      HEXRGB(0xbeb89f)
 #define RBNavTintColor      HEXRGB(0xffffff)
 #define RBNavBarTintColor   HEXRGB(0xc62525)
+
+
+#pragma mark - CellIdentifier
+
+#define RBCellIdentifierWithSearchBook      @"RBCellIdentifierWithSearchBook"
+
+
+//#pragma mark - NSDictionary Key
+//
+//#define RBNovelNameKey          @"name"
+//#define RBNovelLastTimeKey      @"time"
+//#define RBNovelSourceKey        @"sitename"
+
+
+
+
 
 #endif /* RBDesignDefines_h */

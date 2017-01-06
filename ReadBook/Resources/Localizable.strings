@@ -6,5 +6,11 @@
   Copyright © 2016年 机智的静默( https://github.com/jizhidejingmo ). All rights reserved.
 */
 
-navigation.title.novel = "小说";
-navigation.title.stock = "股票";
+"navigation.title.novel" = "小说";
+"navigation.title.stock" = "股票";
+"novel.searchBar.placeholder" = "搜索";
+"novel.searchNovel.title" = "搜索";
+"novel.novelParticulars.title" = "书籍详情";
+
+
+
