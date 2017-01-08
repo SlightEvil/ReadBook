@@ -11,6 +11,7 @@
 "novel.searchBar.placeholder" = "搜索";
 "novel.searchNovel.title" = "搜索";
 "novel.novelParticulars.title" = "书籍详情";
-
+"stock.edit.total.placeholder" = "请填写总金额";
+"stock.edit.cost.placeholder" = "请填写总成本";
 
 

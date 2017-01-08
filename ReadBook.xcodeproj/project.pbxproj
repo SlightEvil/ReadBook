@@ -132,13 +132,6 @@
 			path = NovelParticulars;
 			sourceTree = "<group>";
 		};
-		0455CFFC1E1B53DA000AC9F0 /* Methods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Methods;
-			sourceTree = "<group>";
-		};
 		0455CFFD1E1B848B000AC9F0 /* Book */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				DDD8BF871E179414000E10F7 /* Defines */,
-				0455CFFC1E1B53DA000AC9F0 /* Methods */,
 				0455D0011E1B8C14000AC9F0 /* Categories */,
 			);
 			path = Utils;

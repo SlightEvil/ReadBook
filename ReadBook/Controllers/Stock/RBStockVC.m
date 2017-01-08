@@ -85,7 +85,7 @@
 
 - (IBAction)editTotalPrice:(UIButton *)sender {
     
-    RBStockEditView *editView = [[RBStockEditView alloc] initWithTitle:@"请填写总资金"];
+    RBStockEditView *editView = [[RBStockEditView alloc] initWithTitle:RBLocalizedString(@"stock.edit.total.placeholder")];
     [editView completionBlock:^(NSNumber *price) {
         
         self.totalPriceLabel.text = [NSString stringWithFormat:@"%.2f", [price floatValue]];
@@ -96,7 +96,7 @@
 
 - (IBAction)editCostPrice:(id)sender {
     
-    RBStockEditView *editView = [[RBStockEditView alloc] initWithTitle:@"请填写成本"];
+    RBStockEditView *editView = [[RBStockEditView alloc] initWithTitle:RBLocalizedString(@"stock.edit.cost.placeholder")];
     [editView completionBlock:^(NSNumber *price) {
         
         self.costPriceLabel.text = [NSString stringWithFormat:@"%.2f", [price floatValue]];
