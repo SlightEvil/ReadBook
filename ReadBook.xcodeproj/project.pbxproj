@@ -27,6 +27,12 @@
 		DDD8BF9E1E17966A000E10F7 /* RBNovelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD8BF9C1E17966A000E10F7 /* RBNovelVC.m */; };
 		DDD8BF9F1E17966A000E10F7 /* RBNovelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD8BF9D1E17966A000E10F7 /* RBNovelVC.xib */; };
 		DDD8BFA41E17990F000E10F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDD8BFA31E17990F000E10F7 /* Localizable.strings */; };
+		DDF162B41E22106A00E46868 /* RBStock.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF162B31E22106A00E46868 /* RBStock.m */; };
+		DDF162BA1E22181400E46868 /* NSDate+RBDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF162B91E22181400E46868 /* NSDate+RBDate.m */; };
+		DDF162BD1E221D4300E46868 /* RBStockDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF162BC1E221D4300E46868 /* RBStockDetail.m */; };
+		DDF162C11E22288E00E46868 /* RBStockEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF162C01E22288E00E46868 /* RBStockEditView.m */; };
+		DDF162C41E22297E00E46868 /* UIView+RBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF162C31E22297E00E46868 /* UIView+RBFrame.m */; };
+		DDF162C71E2245E600E46868 /* NSString+RBSandBoxPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF162C61E2245E600E46868 /* NSString+RBSandBoxPath.m */; };
 		DDF642B81E07E8DA00B2EA1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF642B71E07E8DA00B2EA1B /* main.m */; };
 		DDF642BB1E07E8DA00B2EA1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF642BA1E07E8DA00B2EA1B /* AppDelegate.m */; };
 		DDF642C31E07E8DA00B2EA1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF642C21E07E8DA00B2EA1B /* Assets.xcassets */; };
@@ -72,6 +78,18 @@
 		DDD8BF9D1E17966A000E10F7 /* RBNovelVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBNovelVC.xib; sourceTree = "<group>"; };
 		DDD8BFA01E1796AE000E10F7 /* RBDesignDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDesignDefines.h; sourceTree = "<group>"; };
 		DDD8BFA31E17990F000E10F7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		DDF162B21E22106A00E46868 /* RBStock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStock.h; sourceTree = "<group>"; };
+		DDF162B31E22106A00E46868 /* RBStock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStock.m; sourceTree = "<group>"; };
+		DDF162B81E22181400E46868 /* NSDate+RBDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RBDate.h"; sourceTree = "<group>"; };
+		DDF162B91E22181400E46868 /* NSDate+RBDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RBDate.m"; sourceTree = "<group>"; };
+		DDF162BB1E221D4300E46868 /* RBStockDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStockDetail.h; sourceTree = "<group>"; };
+		DDF162BC1E221D4300E46868 /* RBStockDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStockDetail.m; sourceTree = "<group>"; };
+		DDF162BF1E22288E00E46868 /* RBStockEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStockEditView.h; sourceTree = "<group>"; };
+		DDF162C01E22288E00E46868 /* RBStockEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStockEditView.m; sourceTree = "<group>"; };
+		DDF162C21E22297E00E46868 /* UIView+RBFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RBFrame.h"; sourceTree = "<group>"; };
+		DDF162C31E22297E00E46868 /* UIView+RBFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RBFrame.m"; sourceTree = "<group>"; };
+		DDF162C51E2245E600E46868 /* NSString+RBSandBoxPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RBSandBoxPath.h"; sourceTree = "<group>"; };
+		DDF162C61E2245E600E46868 /* NSString+RBSandBoxPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RBSandBoxPath.m"; sourceTree = "<group>"; };
 		DDF642B31E07E8DA00B2EA1B /* ReadBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF642B71E07E8DA00B2EA1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DDF642B91E07E8DA00B2EA1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +155,12 @@
 			children = (
 				0455D0021E1B8CE0000AC9F0 /* NSObject+RBRuntime.h */,
 				0455D0031E1B8CE0000AC9F0 /* NSObject+RBRuntime.m */,
+				DDF162B81E22181400E46868 /* NSDate+RBDate.h */,
+				DDF162B91E22181400E46868 /* NSDate+RBDate.m */,
+				DDF162C21E22297E00E46868 /* UIView+RBFrame.h */,
+				DDF162C31E22297E00E46868 /* UIView+RBFrame.m */,
+				DDF162C51E2245E600E46868 /* NSString+RBSandBoxPath.h */,
+				DDF162C61E2245E600E46868 /* NSString+RBSandBoxPath.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -177,6 +201,7 @@
 		04DAC96F1E0D0D2C00D47DC6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DDF162B11E220FE900E46868 /* Stock */,
 				0455CFFD1E1B848B000AC9F0 /* Book */,
 			);
 			path = Models;
@@ -185,6 +210,7 @@
 		04DAC9701E0D0D3600D47DC6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DDF162BE1E22285A00E46868 /* AlertView */,
 				0455D0091E1BA614000AC9F0 /* TableView */,
 			);
 			path = Views;
@@ -255,6 +281,26 @@
 				DDD8BFA31E17990F000E10F7 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DDF162B11E220FE900E46868 /* Stock */ = {
+			isa = PBXGroup;
+			children = (
+				DDF162B21E22106A00E46868 /* RBStock.h */,
+				DDF162B31E22106A00E46868 /* RBStock.m */,
+				DDF162BB1E221D4300E46868 /* RBStockDetail.h */,
+				DDF162BC1E221D4300E46868 /* RBStockDetail.m */,
+			);
+			path = Stock;
+			sourceTree = "<group>";
+		};
+		DDF162BE1E22285A00E46868 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DDF162BF1E22288E00E46868 /* RBStockEditView.h */,
+				DDF162C01E22288E00E46868 /* RBStockEditView.m */,
+			);
+			path = AlertView;
 			sourceTree = "<group>";
 		};
 		DDF642AA1E07E8DA00B2EA1B = {
@@ -334,7 +380,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RB;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "机智的静默( https://github.com/jizhidejingmo )";
 				TargetAttributes = {
 					DDF642B21E07E8DA00B2EA1B = {
@@ -434,11 +480,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF162C41E22297E00E46868 /* UIView+RBFrame.m in Sources */,
+				DDF162B41E22106A00E46868 /* RBStock.m in Sources */,
+				DDF162C11E22288E00E46868 /* RBStockEditView.m in Sources */,
 				DDD8BF9E1E17966A000E10F7 /* RBNovelVC.m in Sources */,
+				DDF162BD1E221D4300E46868 /* RBStockDetail.m in Sources */,
 				040CCC871E1F87A100299A73 /* RBNovelParticularsCell.m in Sources */,
 				DDF642BB1E07E8DA00B2EA1B /* AppDelegate.m in Sources */,
 				0455D0001E1B853A000AC9F0 /* RBBook.m in Sources */,
 				DDD8BF991E179649000E10F7 /* RBStockVC.m in Sources */,
+				DDF162BA1E22181400E46868 /* NSDate+RBDate.m in Sources */,
+				DDF162C71E2245E600E46868 /* NSString+RBSandBoxPath.m in Sources */,
 				04E83E421E1CF44B006ED271 /* RBNovel.m in Sources */,
 				0455D0101E1BA6BE000AC9F0 /* RBSearchBookCell.m in Sources */,
 				0455D0041E1B8CE0000AC9F0 /* NSObject+RBRuntime.m in Sources */,
@@ -484,6 +536,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -532,6 +585,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
