@@ -152,11 +152,11 @@
     
     if ([notification.name isEqual:@"UIKeyboardWillShowNotification"]) {
         
-        self.centerView.y -= keyBoardFrame.size.height;
+        self.centerView.y = self.height - 100 - keyBoardFrame.size.height;
         
     } else if ([notification.name isEqual: @"UIKeyboardWillHideNotification"]) {
         
-        self.centerView.y += keyBoardFrame.size.height;
+        self.centerView.y = self.height - 100;
     }
 }
 
