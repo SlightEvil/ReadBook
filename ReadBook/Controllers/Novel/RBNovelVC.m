@@ -31,6 +31,7 @@
         
         self.title = RBLocalizedString(@"navigation.title.novel");
         self.hidesBottomBarWhenPushed = NO;
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
     }
     return self;
 }
@@ -69,8 +70,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:RBCellIdentifierWithNovelBookSheif];
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:RBCellIdentifierWithNovelBookSheif forIndexPath:indexPath];
     cell.textLabel.text = @"test";
     
     return cell;

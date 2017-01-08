@@ -33,6 +33,7 @@
     if (self) {
         self.navigationItem.title = RBLocalizedString(@"novel.searchNovel.title");
         self.hidesBottomBarWhenPushed = YES;
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
     }
     return self;
 }
@@ -41,28 +42,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setUpNavBarBackItem];
-    
     [self.view addSubview:self.searchBar];
     [self.view addSubview:self.searchResultTableView];
 }
 
-
-#pragma mark - SetUp UI
-
-- (void)setUpNavBarBackItem {
-    
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_back"] style:UIBarButtonItemStylePlain target:self action:@selector(backNovelSheifVC)];
-    self.navigationItem.leftBarButtonItem = backItem;
-}
-
-
 #pragma mark - Method
-
-- (void)backNovelSheifVC {
-
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 - (void)searchNovelWithNovelName:(NSString *)novelName {
     
@@ -130,7 +114,6 @@
     
     _novelBookArray = novelBookArray;
     [_searchResultTableView reloadData];
-    
 }
 
 #pragma mark - Delegate

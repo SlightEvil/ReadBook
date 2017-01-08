@@ -20,6 +20,7 @@
     if (self) {
         
         self.navigationItem.title = RBLocalizedString(@"novel.novelParticulars.title");
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
     }
     return self;
 }
@@ -27,21 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-}
-
-#pragma mark - Set UI
-
-- (void)setUpNavBarBackItem {
-    
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navbar_back"] style:UIBarButtonItemStylePlain target:self action:@selector(backBeforeVC)];
-    self.navigationItem.leftBarButtonItem = backItem;
-}
-
-#pragma mark - Methods
-
-- (void)backBeforeVC {
-
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
