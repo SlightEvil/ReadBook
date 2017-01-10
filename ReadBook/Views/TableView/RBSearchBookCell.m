@@ -23,7 +23,6 @@
     [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BqgHostUrl,novel.cover]] placeholderImage:[UIImage imageNamed:@"novel_book_placeholder"]];
 }
 
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

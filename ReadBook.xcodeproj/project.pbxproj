@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040CCC871E1F87A100299A73 /* RBNovelParticularsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040CCC851E1F87A100299A73 /* RBNovelParticularsCell.m */; };
-		040CCC881E1F87A100299A73 /* RBNovelParticularsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040CCC861E1F87A100299A73 /* RBNovelParticularsCell.xib */; };
 		0411D1F61E165E9A0054951B /* RBAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D1F51E165E9A0054951B /* RBAppContext.m */; };
 		0428982C1E1E3F9A0015258D /* RBSearchNovel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0428982A1E1E3F9A0015258D /* RBSearchNovel.m */; };
 		0428982D1E1E3F9A0015258D /* RBSearchNovel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0428982B1E1E3F9A0015258D /* RBSearchNovel.xib */; };
@@ -40,9 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		040CCC841E1F87A100299A73 /* RBNovelParticularsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBNovelParticularsCell.h; sourceTree = "<group>"; };
-		040CCC851E1F87A100299A73 /* RBNovelParticularsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBNovelParticularsCell.m; sourceTree = "<group>"; };
-		040CCC861E1F87A100299A73 /* RBNovelParticularsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBNovelParticularsCell.xib; sourceTree = "<group>"; };
 		0411D1F41E165E9A0054951B /* RBAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RBAppContext.h; path = AppContext/RBAppContext.h; sourceTree = "<group>"; };
 		0411D1F51E165E9A0054951B /* RBAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RBAppContext.m; path = AppContext/RBAppContext.m; sourceTree = "<group>"; };
 		042898291E1E3F9A0015258D /* RBSearchNovel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSearchNovel.h; sourceTree = "<group>"; };
@@ -164,9 +159,6 @@
 				0455D00D1E1BA6BE000AC9F0 /* RBSearchBookCell.h */,
 				0455D00E1E1BA6BE000AC9F0 /* RBSearchBookCell.m */,
 				0455D00F1E1BA6BE000AC9F0 /* RBSearchBookCell.xib */,
-				040CCC841E1F87A100299A73 /* RBNovelParticularsCell.h */,
-				040CCC851E1F87A100299A73 /* RBNovelParticularsCell.m */,
-				040CCC861E1F87A100299A73 /* RBNovelParticularsCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -377,7 +369,7 @@
 				TargetAttributes = {
 					DDF642B21E07E8DA00B2EA1B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = TH868Z5Q6R;
+						DevelopmentTeam = 6UARGHV5EB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -409,7 +401,6 @@
 				DDD8BFA41E17990F000E10F7 /* Localizable.strings in Resources */,
 				DDF642C61E07E8DA00B2EA1B /* LaunchScreen.storyboard in Resources */,
 				DDD8BF9A1E179649000E10F7 /* RBStockVC.xib in Resources */,
-				040CCC881E1F87A100299A73 /* RBNovelParticularsCell.xib in Resources */,
 				042898391E1E567E0015258D /* RBNovelParticularsVC.xib in Resources */,
 				0428982D1E1E3F9A0015258D /* RBSearchNovel.xib in Resources */,
 				DDF642C31E07E8DA00B2EA1B /* Assets.xcassets in Resources */,
@@ -477,7 +468,6 @@
 				DDF162C11E22288E00E46868 /* RBStockEditView.m in Sources */,
 				DDD8BF9E1E17966A000E10F7 /* RBNovelVC.m in Sources */,
 				DDF162BD1E221D4300E46868 /* RBStockDetail.m in Sources */,
-				040CCC871E1F87A100299A73 /* RBNovelParticularsCell.m in Sources */,
 				DDF642BB1E07E8DA00B2EA1B /* AppDelegate.m in Sources */,
 				0455D0001E1B853A000AC9F0 /* RBBook.m in Sources */,
 				DDD8BF991E179649000E10F7 /* RBStockVC.m in Sources */,
@@ -607,7 +597,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TH868Z5Q6R;
+				DEVELOPMENT_TEAM = 6UARGHV5EB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ReadBook/PrefixHeader.pch";
 				INFOPLIST_FILE = ReadBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -623,7 +613,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TH868Z5Q6R;
+				DEVELOPMENT_TEAM = 6UARGHV5EB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ReadBook/PrefixHeader.pch";
 				INFOPLIST_FILE = ReadBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -1,12 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RBNovelParticularsVC">
             <connections>
+                <outlet property="author" destination="ANr-eP-Czo" id="dge-V6-u2v"/>
+                <outlet property="coverImage" destination="68R-UB-ZwK" id="7jR-z5-FrW"/>
+                <outlet property="intro" destination="gnn-RO-7zQ" id="GRb-vi-h8k"/>
+                <outlet property="lastChapter" destination="ozf-jR-jZD" id="qjS-Mv-M6F"/>
+                <outlet property="lastTime" destination="uHN-SE-Mqj" id="xBI-5S-HQg"/>
+                <outlet property="novelName" destination="38C-Fu-t2E" id="RpX-X0-p6w"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +26,170 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgX-Pq-nQk">
+                    <rect key="frame" x="21" y="202" width="79" height="45"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="79" id="O0K-mH-zps"/>
+                    </constraints>
+                    <state key="normal" title="开始阅读">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="readNovel:" destination="-1" eventType="touchUpInside" id="AFe-FQ-KIT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQF-cB-cwP">
+                    <rect key="frame" x="276" y="202" width="79" height="45"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="TDh-wK-l4I"/>
+                        <constraint firstAttribute="width" constant="79" id="yvW-aH-t9V"/>
+                    </constraints>
+                    <state key="normal" title="开始缓存">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cacheNovel:" destination="-1" eventType="touchUpInside" id="UPz-n3-TN8"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38C-Fu-t2E">
+                    <rect key="frame" x="140" y="30" width="215" height="25"/>
+                    <attributedString key="attributedText">
+                        <fragment content="书名">
+                            <attributes>
+                                <font key="NSFont" size="16" name="MicrosoftYaHei"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="68R-UB-ZwK">
+                    <rect key="frame" x="20" y="30" width="100" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="29W-RL-Y15"/>
+                        <constraint firstAttribute="width" constant="100" id="hDH-HV-aiy"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnn-RO-7zQ">
+                    <rect key="frame" x="30" y="291" width="315" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="bYw-Q4-1Rl"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="简介">
+                            <attributes>
+                                <font key="NSFont" size="15" name="MicrosoftYaHei"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozf-jR-jZD">
+                    <rect key="frame" x="140" y="95" width="70" height="25"/>
+                    <attributedString key="attributedText">
+                        <fragment content="最新章节：">
+                            <attributes>
+                                <font key="NSFont" size="14" name="MicrosoftYaHei"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANr-eP-Czo">
+                    <rect key="frame" x="140" y="62" width="214" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="oFi-ec-Ah9"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="作者:">
+                            <attributes>
+                                <font key="NSFont" size="14" name="MicrosoftYaHei"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq6-39-ba1">
+                    <rect key="frame" x="148" y="202" width="78" height="45"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="加入书架">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="addRemoveNovel:" destination="-1" eventType="touchUpInside" id="bvQ-ws-czl"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHN-SE-Mqj">
+                    <rect key="frame" x="140" y="127" width="103" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="103" id="K0q-nk-hii"/>
+                        <constraint firstAttribute="height" constant="25" id="ToB-uv-QYH"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="最后更新时间">
+                            <attributes>
+                                <font key="NSFont" size="14" name="MicrosoftYaHei"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dq6-39-ba1" firstAttribute="leading" secondItem="AgX-Pq-nQk" secondAttribute="trailing" constant="48" id="4Ya-Wz-yQP"/>
+                <constraint firstItem="ANr-eP-Czo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="62" id="4pL-EY-3ZI"/>
+                <constraint firstItem="AgX-Pq-nQk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="6Br-PC-IV1"/>
+                <constraint firstItem="YQF-cB-cwP" firstAttribute="baseline" secondItem="dq6-39-ba1" secondAttribute="firstBaseline" id="7aX-kR-nRT"/>
+                <constraint firstItem="gnn-RO-7zQ" firstAttribute="top" secondItem="dq6-39-ba1" secondAttribute="bottom" constant="44" id="7dM-UL-ebx"/>
+                <constraint firstItem="68R-UB-ZwK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="Cov-xz-nFT"/>
+                <constraint firstItem="uHN-SE-Mqj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="127" id="DmP-gr-nHX"/>
+                <constraint firstAttribute="trailing" secondItem="ANr-eP-Czo" secondAttribute="trailing" constant="21" id="GUL-9T-UXX"/>
+                <constraint firstItem="38C-Fu-t2E" firstAttribute="trailing" secondItem="YQF-cB-cwP" secondAttribute="trailing" id="Gpw-yy-bgu"/>
+                <constraint firstItem="YQF-cB-cwP" firstAttribute="firstBaseline" secondItem="dq6-39-ba1" secondAttribute="baseline" id="JSw-af-bK3"/>
+                <constraint firstItem="38C-Fu-t2E" firstAttribute="top" secondItem="68R-UB-ZwK" secondAttribute="top" id="MTs-QP-NBb"/>
+                <constraint firstItem="68R-UB-ZwK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="MqF-rX-49Q"/>
+                <constraint firstAttribute="trailing" secondItem="gnn-RO-7zQ" secondAttribute="trailing" constant="30" id="NLw-kR-dLf"/>
+                <constraint firstItem="YQF-cB-cwP" firstAttribute="leading" secondItem="dq6-39-ba1" secondAttribute="trailing" constant="50" id="PKi-ff-0t7"/>
+                <constraint firstItem="dq6-39-ba1" firstAttribute="top" secondItem="uHN-SE-Mqj" secondAttribute="bottom" constant="50" id="Q42-dH-L7S"/>
+                <constraint firstItem="YQF-cB-cwP" firstAttribute="baseline" secondItem="AgX-Pq-nQk" secondAttribute="baseline" id="TE3-Cn-35M"/>
+                <constraint firstItem="ANr-eP-Czo" firstAttribute="leading" secondItem="uHN-SE-Mqj" secondAttribute="leading" id="Uqg-cf-mb7"/>
+                <constraint firstItem="ANr-eP-Czo" firstAttribute="top" secondItem="38C-Fu-t2E" secondAttribute="bottom" constant="7" id="VnT-TK-ogN"/>
+                <constraint firstItem="ANr-eP-Czo" firstAttribute="leading" secondItem="68R-UB-ZwK" secondAttribute="trailing" constant="20" id="W9V-SH-HoP"/>
+                <constraint firstItem="YQF-cB-cwP" firstAttribute="baseline" secondItem="AgX-Pq-nQk" secondAttribute="firstBaseline" id="gIr-jF-MI9"/>
+                <constraint firstItem="YQF-cB-cwP" firstAttribute="top" secondItem="AgX-Pq-nQk" secondAttribute="top" id="gac-HY-aRW"/>
+                <constraint firstItem="ozf-jR-jZD" firstAttribute="top" secondItem="ANr-eP-Czo" secondAttribute="bottom" constant="8" symbolic="YES" id="jUn-fo-Us4"/>
+                <constraint firstItem="YQF-cB-cwP" firstAttribute="top" secondItem="dq6-39-ba1" secondAttribute="top" id="k0M-Js-tci"/>
+                <constraint firstItem="gnn-RO-7zQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="tCE-Tm-3Pd"/>
+                <constraint firstItem="uHN-SE-Mqj" firstAttribute="top" secondItem="ozf-jR-jZD" secondAttribute="bottom" constant="7" id="tvP-Bg-a3s"/>
+                <constraint firstItem="38C-Fu-t2E" firstAttribute="leading" secondItem="68R-UB-ZwK" secondAttribute="trailing" constant="20" id="vwk-Ar-iXe"/>
+                <constraint firstAttribute="trailing" secondItem="38C-Fu-t2E" secondAttribute="trailing" constant="20" id="wMY-ji-Qc9"/>
+                <constraint firstItem="38C-Fu-t2E" firstAttribute="leading" secondItem="ozf-jR-jZD" secondAttribute="leading" id="wbv-ob-nn8"/>
+            </constraints>
+            <point key="canvasLocation" x="-268.5" y="62.5"/>
         </view>
     </objects>
 </document>

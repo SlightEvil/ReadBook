@@ -177,6 +177,7 @@
     
     RBNovelParticularsVC *particulars = [[RBNovelParticularsVC alloc]init];
     [self.navigationController pushViewController:particulars animated:YES];
+    particulars.book = [self.novelBookArray objectAtIndex:indexPath.row];
 }
 
 - (void)didReceiveMemoryWarning {
