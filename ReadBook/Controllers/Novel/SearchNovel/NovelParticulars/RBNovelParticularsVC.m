@@ -41,7 +41,7 @@
     self.novelName.text = novel.name;
     self.intro.text = [NSString stringWithFormat:@"简介：%@",novel.intro];
     self.author.text = [NSString stringWithFormat:@"作者：%@",[self.book.author objectForKey:@"name"]];
-    self.lastChapter.text = [NSString stringWithFormat:@"最新章节：%@",[self.book.last objectForKey:@"name"]];
+    self.lastChapter.text = [NSString stringWithFormat:@"%@",[self.book.last objectForKey:@"name"]];
     self.lastTime.text = [NSString stringWithFormat:@"最后更新时间：%@",[NSDate stringFromeTimeInterval:[self.book.last objectForKey:@"time"] formatter:@"yyyy-MM-dd"]];
 
 }
@@ -50,7 +50,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 
 - (IBAction)readNovel:(UIButton *)sender {

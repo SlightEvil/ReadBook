@@ -14,5 +14,4 @@ RBSingletonDeclaration
 
 - (void)setUpWindowRootViewController;
 
-
 @end

@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *author;
 @property (weak, nonatomic) IBOutlet UILabel *lastChapter;
 @property (weak, nonatomic) IBOutlet UILabel *lastTime;
-@property (weak, nonatomic) IBOutlet UILabel *intro;
+@property (weak, nonatomic) IBOutlet UITextView *intro;
 
 
 - (IBAction)readNovel:(UIButton *)sender;
