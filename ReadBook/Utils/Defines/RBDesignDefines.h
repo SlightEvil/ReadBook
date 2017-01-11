@@ -11,8 +11,11 @@
 
 #pragma mark - URL
 
-#define BqgHostUrl                  @"https://goapi.yphsy.com/"
-#define BqgSearchUrl(bookName)      [[NSString stringWithFormat:@"api/novel/list.html?page=1&pagesize=20&searchkey=%@&searchtype=name", bookName]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+#define BqgHostUrl                  @"https://goapi.yphsy.com/api/"
+#define BqgSearchUrl(bookName)      [[NSString stringWithFormat:@"novel/list.html?page=1&pagesize=20&searchkey=%@&searchtype=name", bookName]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+#define BqgReadNovelUrl             @"novel/dir.html"
+
+
 
 #pragma mark - Constant
 

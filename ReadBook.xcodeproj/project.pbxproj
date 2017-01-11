@@ -16,6 +16,8 @@
 		0455D0041E1B8CE0000AC9F0 /* NSObject+RBRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455D0031E1B8CE0000AC9F0 /* NSObject+RBRuntime.m */; };
 		0455D0101E1BA6BE000AC9F0 /* RBSearchBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455D00E1E1BA6BE000AC9F0 /* RBSearchBookCell.m */; };
 		0455D0111E1BA6BE000AC9F0 /* RBSearchBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0455D00F1E1BA6BE000AC9F0 /* RBSearchBookCell.xib */; };
+		04861D571E2615B300A09DE1 /* RBReadNovelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04861D561E2615B300A09DE1 /* RBReadNovelVC.m */; };
+		04861D5A1E26383200A09DE1 /* RBChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04861D591E26383200A09DE1 /* RBChapter.m */; };
 		04DACB671E0D165A00D47DC6 /* RBBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DACB661E0D165A00D47DC6 /* RBBaseNavigationController.m */; };
 		04E83E421E1CF44B006ED271 /* RBNovel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E83E411E1CF44B006ED271 /* RBNovel.m */; };
 		95A9D8049738F9F67FC3AB0B /* libPods-ReadBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6882AD769D0A1CDC93DB523E /* libPods-ReadBook.a */; };
@@ -53,6 +55,10 @@
 		0455D00D1E1BA6BE000AC9F0 /* RBSearchBookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSearchBookCell.h; sourceTree = "<group>"; };
 		0455D00E1E1BA6BE000AC9F0 /* RBSearchBookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSearchBookCell.m; sourceTree = "<group>"; };
 		0455D00F1E1BA6BE000AC9F0 /* RBSearchBookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBSearchBookCell.xib; sourceTree = "<group>"; };
+		04861D551E2615B300A09DE1 /* RBReadNovelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBReadNovelVC.h; sourceTree = "<group>"; };
+		04861D561E2615B300A09DE1 /* RBReadNovelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBReadNovelVC.m; sourceTree = "<group>"; };
+		04861D581E26383200A09DE1 /* RBChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBChapter.h; sourceTree = "<group>"; };
+		04861D591E26383200A09DE1 /* RBChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBChapter.m; sourceTree = "<group>"; };
 		04DACB651E0D165A00D47DC6 /* RBBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBaseNavigationController.h; sourceTree = "<group>"; };
 		04DACB661E0D165A00D47DC6 /* RBBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBaseNavigationController.m; sourceTree = "<group>"; };
 		04DEC1241E124ED20052522A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 				0455CFFF1E1B853A000AC9F0 /* RBBook.m */,
 				04E83E401E1CF44B006ED271 /* RBNovel.h */,
 				04E83E411E1CF44B006ED271 /* RBNovel.m */,
+				04861D581E26383200A09DE1 /* RBChapter.h */,
+				04861D591E26383200A09DE1 /* RBChapter.m */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -161,6 +169,15 @@
 				0455D00F1E1BA6BE000AC9F0 /* RBSearchBookCell.xib */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		04861D541E26133600A09DE1 /* ReadNovel */ = {
+			isa = PBXGroup;
+			children = (
+				04861D551E2615B300A09DE1 /* RBReadNovelVC.h */,
+				04861D561E2615B300A09DE1 /* RBReadNovelVC.m */,
+			);
+			path = ReadNovel;
 			sourceTree = "<group>";
 		};
 		04DAC9691E0D063500D47DC6 /* Utils */ = {
@@ -241,6 +258,7 @@
 		DDD8BF8A1E17951A000E10F7 /* Novel */ = {
 			isa = PBXGroup;
 			children = (
+				04861D541E26133600A09DE1 /* ReadNovel */,
 				042898251E1E3EE10015258D /* SearchNovel */,
 				DDD8BF9B1E17966A000E10F7 /* RBNovelVC.h */,
 				DDD8BF9C1E17966A000E10F7 /* RBNovelVC.m */,
@@ -473,11 +491,13 @@
 				DDD8BF991E179649000E10F7 /* RBStockVC.m in Sources */,
 				DDF162BA1E22181400E46868 /* NSDate+RBDate.m in Sources */,
 				DDF162C71E2245E600E46868 /* NSString+RBSandBoxPath.m in Sources */,
+				04861D5A1E26383200A09DE1 /* RBChapter.m in Sources */,
 				04E83E421E1CF44B006ED271 /* RBNovel.m in Sources */,
 				0455D0101E1BA6BE000AC9F0 /* RBSearchBookCell.m in Sources */,
 				0455D0041E1B8CE0000AC9F0 /* NSObject+RBRuntime.m in Sources */,
 				DDF642B81E07E8DA00B2EA1B /* main.m in Sources */,
 				0428982C1E1E3F9A0015258D /* RBSearchNovel.m in Sources */,
+				04861D571E2615B300A09DE1 /* RBReadNovelVC.m in Sources */,
 				0411D1F61E165E9A0054951B /* RBAppContext.m in Sources */,
 				04DACB671E0D165A00D47DC6 /* RBBaseNavigationController.m in Sources */,
 				042898381E1E567E0015258D /* RBNovelParticularsVC.m in Sources */,

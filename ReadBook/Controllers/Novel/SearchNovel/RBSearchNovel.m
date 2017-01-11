@@ -83,6 +83,17 @@
         NSLog(@"fail = %@",error.localizedDescription);
     }];
     
+    
+    [sessionManager GET:@"" parameters:@"" progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
+    
+    
+    
+    
 }
 
 #pragma mark - Getter

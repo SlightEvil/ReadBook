@@ -11,6 +11,8 @@
 #import "RBNovel.h"
 #import "NSDate+RBDate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "RBReadNovelVC.h"
+
 
 
 @interface RBNovelParticularsVC () <UITabBarDelegate, UITableViewDelegate>
@@ -54,6 +56,9 @@
 
 - (IBAction)readNovel:(UIButton *)sender {
     
+    RBReadNovelVC *readNovelVC = [RBReadNovelVC new];
+    readNovelVC.book = self.book;
+    [self.navigationController pushViewController:readNovelVC animated:YES];
 }
 
 - (IBAction)addRemoveNovel:(UIButton *)sender {

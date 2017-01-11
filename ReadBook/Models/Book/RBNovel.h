@@ -8,9 +8,9 @@
 
 @interface RBNovel : NSObject
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *intro;
-@property (nonatomic, copy) NSString *cover;
-
+@property (nonatomic) NSString *ID;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *intro;
+@property (nonatomic) NSString *cover;
 
 @end

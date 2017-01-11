@@ -9,13 +9,11 @@
 #import "RBNovelVC.h"
 #import "RBBook.h"
 #import "RBSearchNovel.h"
-
-#import <AFHTTPSessionManager.h>
-
+#import <AFNetworking.h>
 
 @interface RBNovelVC () <UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 
-@property (nonatomic, copy) NSArray *bookArray;
+@property (nonatomic) NSArray *bookArray;
 @property (nonatomic) UITableView *bookTableView;
 @property (nonatomic) UISearchBar *searchBar;
 
@@ -66,7 +64,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.bookArray.count;
+    return self.bookArray.count ? : 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

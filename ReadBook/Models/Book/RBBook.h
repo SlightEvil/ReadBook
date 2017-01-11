@@ -12,13 +12,13 @@
 
 @interface RBBook : NSObject
 
-@property (nonatomic, copy) NSDictionary *author;
-@property (nonatomic, copy) NSDictionary *category;
-@property (nonatomic, copy) NSDictionary *source;
-@property (nonatomic, copy) NSDictionary *novel;    //小说
-@property (nonatomic, copy) NSDictionary *data;
-@property (nonatomic, copy) NSDictionary *last;
-@property (nonatomic, copy) NSDictionary *url;
+@property (nonatomic) NSDictionary *author;
+@property (nonatomic) NSDictionary *category;
+@property (nonatomic) NSDictionary *source;
+@property (nonatomic) NSDictionary *novel;    //小说
+@property (nonatomic) NSDictionary *data;
+@property (nonatomic) NSDictionary *last;
+@property (nonatomic) NSDictionary *url;
 
 @end
 
