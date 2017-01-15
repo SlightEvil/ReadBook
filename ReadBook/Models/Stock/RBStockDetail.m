@@ -7,41 +7,52 @@
 //
 
 #import "RBStockDetail.h"
-#import "NSDate+RBDate.h"
 
-typedef NS_ENUM(NSUInteger, RBStockTradeType) {
-    
-    kRBStockTradeBuyType = 0,
-    kRBStockTradeSellType
-};
+static NSString *const kStockName = @"stockName";
+static NSString *const kBuyReason = @"buyReason";
+static NSString *const kSellReason = @"sellReason";
+static NSString *const kStartTime = @"startTime";
+static NSString *const kEndTime = @"endTime";
+static NSString *const kBuyPrice = @"buyPrice";
+static NSString *const kSellPrice = @"sellPrice";
+static NSString *const kStopLossPrice = @"stopLossPrice";
+static NSString *const kTargetPrice = @"targetPrice";
+static NSString *const kValueArray = @"valueArray";
+
+@interface RBStockDetail () <NSCoding>
+
+@end
 
 @implementation RBStockDetail
 
-#pragma mark - Setter
-
-- (void)setStockNumber:(NSInteger)stockNumber {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     
-    if (stockNumber > 0) {
-        
-        self.traderType = kRBStockTradeBuyType;
-    } else if (stockNumber < 0) {
-        
-        self.traderType = kRBStockTradeSellType;
-    }
+    self.stockName = [aDecoder decodeObjectForKey:kStockName];
+    self.buyReason = [aDecoder decodeObjectForKey:kBuyReason];
+    self.sellReason = [aDecoder decodeObjectForKey:kSellReason];
+    self.startTime = [aDecoder decodeObjectForKey:kStartTime];
+    self.endTime = [aDecoder decodeObjectForKey:kEndTime];
+    self.buyPrice = [aDecoder decodeFloatForKey:kBuyPrice];
+    self.sellPrice = [aDecoder decodeFloatForKey:kSellPrice];
+    self.stopLossPrice = [aDecoder decodeFloatForKey:kStopLossPrice];
+    self.targetPrice = [aDecoder decodeFloatForKey:kTargetPrice];
+    self.valueArray = [aDecoder decodeObjectForKey:kValueArray];
+    
+    return self;
 }
 
-- (void)setStartTime:(NSString *)startTime {
+- (void)encodeWithCoder:(NSCoder *)aCoder {
     
-    if (startTime.length == 0 || startTime == nil || startTime == NULL) {
-        
-        _startTime = [NSDate stringFromDate:[NSDate date] formatter:@"yyyy-MM-dd"];
-    }
-}
-
-- (void)setBuyPrice:(CGFloat)buyPrice {
-    
-    self.stopLossPrice = buyPrice * 0.97;
-    self.targetPrice = buyPrice * 1.03;
+    [aCoder encodeObject:self.stockName forKey:kStockName];
+    [aCoder encodeObject:self.buyReason forKey:kBuyReason];
+    [aCoder encodeObject:self.sellReason forKey:kSellReason];
+    [aCoder encodeObject:self.startTime forKey:kStartTime];
+    [aCoder encodeObject:self.endTime forKey:kEndTime];
+    [aCoder encodeFloat:self.buyPrice forKey:kBuyPrice];
+    [aCoder encodeFloat:self.sellPrice forKey:kSellPrice];
+    [aCoder encodeFloat:self.stopLossPrice forKey:kStopLossPrice];
+    [aCoder encodeFloat:self.targetPrice forKey:kTargetPrice];
+    [aCoder encodeObject:self.valueArray forKey:kValueArray];
 }
 
 @end

@@ -20,18 +20,18 @@ static NSString *const kCostMoney = @"costMoney";
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     
-    self.incomeMoney = [[coder decodeObjectForKey:kIncomeMoney] floatValue];
-    self.totalMoney = [[coder decodeObjectForKey:kTotalMoney] floatValue];
-    self.costMoney = [[coder decodeObjectForKey:kCostMoney] floatValue];
+    self.incomeMoney = [coder decodeFloatForKey:kIncomeMoney] ;
+    self.totalMoney = [coder decodeFloatForKey:kTotalMoney];
+    self.costMoney = [coder decodeFloatForKey:kCostMoney];
     
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     
-    [aCoder encodeObject:[NSNumber numberWithFloat:self.incomeMoney] forKey:kIncomeMoney];
-    [aCoder encodeObject:[NSNumber numberWithFloat:self.totalMoney] forKey:kTotalMoney];
-    [aCoder encodeObject:[NSNumber numberWithFloat:self.costMoney] forKey:kCostMoney];
+    [aCoder encodeFloat:self.incomeMoney forKey:kIncomeMoney];
+    [aCoder encodeFloat:self.totalMoney forKey:kTotalMoney];
+    [aCoder encodeFloat:self.costMoney forKey:kCostMoney];
 }
 
 @end

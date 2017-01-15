@@ -14,7 +14,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "RBDefines.h"
-
+    #import "NSArray+RBArray.h"
+    #import "NSNumber+RBNumber.h"
 #endif
 
 #endif /* PrefixHeader_pch */

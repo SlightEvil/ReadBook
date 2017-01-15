@@ -10,8 +10,13 @@
 #import "RBStockEditView.h"
 #import "RBStock.h"
 #import "NSString+RBSandBoxPath.h"
+#import "RBAddOneStock.h"
+#import "RBStockDetail.h"
 
 #define PATH [[NSString documentPath] stringByAppendingString:@"/stock.data"]
+#define DetailPATH [[NSString documentPath] stringByAppendingString:@"/stockDetail.data"]
+
+static NSString *const kRBDetailStockCellIdentifier = @"RBDetailStockCell";
 
 @interface RBStockVC ()
 
@@ -19,8 +24,10 @@
 @property (nonatomic, weak) IBOutlet UILabel *incomeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *totalPriceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *costPriceLabel;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @property (nonatomic) RBStock *stock;
+@property (nonatomic) RBStockDetail *stockDetail;
 
 @end
 
@@ -37,12 +44,20 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+//    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     [self setupData];
     [self setUpNavBarItem];
     [self setUpHeaderViewWithIncome:self.stock.incomeMoney];
+    [self setupTableView];
 }
 
 #pragma mark - Setup
@@ -50,6 +65,10 @@
 - (void)setupData {
     
     self.stock = [NSKeyedUnarchiver unarchiveObjectWithFile:PATH];
+    if (!self.stock) self.stock = [[RBStock alloc] init];
+    
+    self.stockDetail = [NSKeyedUnarchiver unarchiveObjectWithFile:DetailPATH];
+    if (!self.stockDetail) self.stockDetail = [[RBStockDetail alloc] init];
 }
 
 - (void)setUpNavBarItem {
@@ -76,20 +95,29 @@
     }
 }
 
+- (void)setupTableView {
+ 
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kRBDetailStockCellIdentifier];
+    self.tableView.separatorColor = [UIColor blackColor];
+    self.tableView.tableFooterView = [[UIView alloc] init];
+}
+
 #pragma mark - Action
 
 - (void)addOneStock {
     
-    NSLog(@"add");
+    RBAddOneStock *vc = [RBAddOneStock new];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)editTotalPrice:(UIButton *)sender {
     
     RBStockEditView *editView = [[RBStockEditView alloc] initWithTitle:RBLocalizedString(@"stock.edit.total.placeholder")];
-    [editView completionBlock:^(NSNumber *price) {
+    [editView completionBlock:^(CGFloat price) {
         
-        self.totalPriceLabel.text = [NSString stringWithFormat:@"%.2f", [price floatValue]];
-        self.stock.totalMoney = [price floatValue];
+        self.totalPriceLabel.text = [NSString stringWithFormat:@"%.2f", price];
+        self.stock.totalMoney = price;
         [self calculateMoney];
     }];
 }
@@ -97,10 +125,10 @@
 - (IBAction)editCostPrice:(id)sender {
     
     RBStockEditView *editView = [[RBStockEditView alloc] initWithTitle:RBLocalizedString(@"stock.edit.cost.placeholder")];
-    [editView completionBlock:^(NSNumber *price) {
+    [editView completionBlock:^(CGFloat price) {
         
-        self.costPriceLabel.text = [NSString stringWithFormat:@"%.2f", [price floatValue]];
-        self.stock.costMoney = [price floatValue];
+        self.costPriceLabel.text = [NSString stringWithFormat:@"%.2f", price];
+        self.stock.costMoney = price;
         [self calculateMoney];
     }];
 }
@@ -110,20 +138,23 @@
     self.stock.incomeMoney = self.stock.totalMoney - self.stock.costMoney;
     [NSKeyedArchiver archiveRootObject:self.stock toFile:PATH];
     
-    self.incomeLabel.text = [NSString stringWithFormat:@"%.2f", self.stock.incomeMoney];
     [self setUpHeaderViewWithIncome:self.stock.incomeMoney];
 }
 
-#pragma mark - Getter
+#pragma mark - TableView
 
-- (RBStock *)stock {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (!_stock) {
-        
-        _stock = [[RBStock alloc] init];
-    }
+    return self.stockDetail.valueArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return _stock;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kRBDetailStockCellIdentifier forIndexPath:indexPath];
+    
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@", [self.stockDetail.valueArray objectOrNilAtIndex:indexPath.row]];
+    
+    return cell;
 }
 
 @end

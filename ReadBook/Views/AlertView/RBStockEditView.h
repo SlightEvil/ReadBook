@@ -12,8 +12,6 @@
 
 - (instancetype)initWithTitle:(NSString *)title;
 
-- (void)removeStockEditView;
-
-- (void)completionBlock:(void (^)(NSNumber *price))block;
+- (void)completionBlock:(void (^)(CGFloat price))block;
 
 @end

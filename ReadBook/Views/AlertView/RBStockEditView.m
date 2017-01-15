@@ -17,7 +17,7 @@
 @property (nonatomic) UIButton *sureButton;
 
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) void (^block)(NSNumber *);
+@property (nonatomic, copy) void (^block)(CGFloat);
 
 @end
 
@@ -45,7 +45,7 @@
     [self removeFromSuperview];
 }
 
-- (void)completionBlock:(void (^)(NSNumber *))block {
+- (void)completionBlock:(void (^)(CGFloat))block {
     
     self.block = block;
 }
@@ -166,10 +166,9 @@
     
     if (self.block) {
         
-        CGFloat money = self.textField.text.floatValue;
-        NSNumber *number = [NSNumber numberWithFloat:money];
+        CGFloat money = [NSNumber priceWithString:self.textField.text].floatValue;
         
-        self.block(number);
+        self.block(money);
     }
     
     [self removeStockEditView];
