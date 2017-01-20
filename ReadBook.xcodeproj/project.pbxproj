@@ -421,7 +421,7 @@
 				TargetAttributes = {
 					DDF642B21E07E8DA00B2EA1B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = TH868Z5Q6R;
+						DevelopmentTeam = 6UARGHV5EB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -657,7 +657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TH868Z5Q6R;
+				DEVELOPMENT_TEAM = 6UARGHV5EB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ReadBook/PrefixHeader.pch";
 				INFOPLIST_FILE = ReadBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -673,7 +673,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TH868Z5Q6R;
+				DEVELOPMENT_TEAM = 6UARGHV5EB;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ReadBook/PrefixHeader.pch";
 				INFOPLIST_FILE = ReadBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

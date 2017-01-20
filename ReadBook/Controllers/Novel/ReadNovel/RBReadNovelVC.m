@@ -34,7 +34,6 @@ static NSString *novelKey = @"novelid";
 
     _book = book;
     
-    
     if (!_book) {
         NSLog(@"赋值bookmodel 失败%s",__FUNCTION__);
         return;
@@ -43,11 +42,16 @@ static NSString *novelKey = @"novelid";
     NSString *searchUrl = [NSString stringWithFormat:@"%@%@",BqgHostUrl,BqgReadNovelUrl];
     NSDictionary *dic  = [NSDictionary dictionaryWithObjectsAndKeys:novelKey,novelID, nil];
     
-    
+
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-//    session.requestSerializer = [AFHTTPRequestSerializer serializer];
+//    session.requestSerializer = [[AFHTTPRequestSerializer alloc]init];
+//    [session.requestSerializer setValue:@"text/json" forHTTPHeaderField:@"charset=utf-8"];
+//    
+    AFHTTPRequestSerializer *serializer = [[AFHTTPRequestSerializer alloc]init];
+    [serializer setValue:@"text/json,charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    session.requestSerializer = serializer;
+
     session.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
     [session POST:searchUrl parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSError *error = nil;
@@ -58,7 +62,6 @@ static NSString *novelKey = @"novelid";
         }
         
         NSArray *chapterArray = [dic objectForKey:@"data"];
-        
         NSMutableArray *array = [NSMutableArray array];
         
         [chapterArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -68,27 +71,12 @@ static NSString *novelKey = @"novelid";
             [array addObject:chapter];
         }];
         self.chapterArray = array.copy;
-        
-        
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"search novel chapter fail /n %s, = %@",__FUNCTION__,error.localizedDescription);
     }];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-
-    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-    session.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
-    [session POST:@"" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
-    
-}
 
 
 - (void)didReceiveMemoryWarning {
